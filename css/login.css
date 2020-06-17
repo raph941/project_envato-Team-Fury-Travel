@@ -2,12 +2,18 @@ body {
     background-color: #333333;
 }
 
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .card {
     border-radius: 2rem;
     margin-bottom: 10rem;
     margin-top: 8rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    width: 507px;
+    height: auto;
 }
 
 
@@ -19,6 +25,10 @@ input[type=password] {
     background-color: #F2F2F2;
 }
 
+input[type=checkbox] {
+    height: 1.5rem;
+    width: 1.5rem;
+}
 
 .button-div {
     display: flex;
