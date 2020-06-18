@@ -8,12 +8,14 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
+    align-content:center; 
+    min-height: 100%;
+    min-height: 75vh;
 }
 
 .card {
     border-radius: 2rem;
-    margin-bottom: 5rem;
-    margin-top: 2rem;
     width: 507px;
     height: 100%;
     font-size: small;
@@ -38,8 +40,8 @@ input[type=password] {
 }
 
 input[type=checkbox] {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
 }
 
 .button-div {
