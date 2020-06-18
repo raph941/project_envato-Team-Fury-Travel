@@ -10,8 +10,8 @@ body {
     flex-direction: row;
     align-items: center;
     align-content:center; 
-    min-height: 100%;
-    min-height: 75vh;
+    min-height: 80%;
+    min-height: 80vh;
 }
 
 .card {
@@ -19,6 +19,7 @@ body {
     width: 507px;
     height: 100%;
     font-size: small;
+    margin-left: .9px;
 }
 
 ::placeholder {
@@ -63,8 +64,10 @@ input[type=checkbox] {
 
 .powered {
     color: #B1B1B1;
+    margin-top: 3rem;
 }
 
 .hng {
     color: white;
+    
 }
