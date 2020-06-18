@@ -1,5 +1,7 @@
 body {
     background-color: #333333;
+    display: block;
+    height: fit-content;
 }
 
 .container-fluid {
@@ -10,19 +12,29 @@ body {
 
 .card {
     border-radius: 2rem;
-    margin-bottom: 10rem;
-    margin-top: 8rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
     width: 507px;
-    height: auto;
+    height: 100%;
+    font-size: small;
 }
 
+::placeholder {
+    font-size: small;
+}
+
+h1 {
+    font-weight: 600;
+}
 
 input[type=email] {
     background-color: #F2F2F2;
+    height: 2rem;
 }
 
 input[type=password] {
     background-color: #F2F2F2;
+    height: 2rem;
 }
 
 input[type=checkbox] {
