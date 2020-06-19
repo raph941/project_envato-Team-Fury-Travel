@@ -151,7 +151,7 @@ body {
   padding: 10px;
 }
 
-.back-to-top .backIcon:hover , .back-to-top__footer:hover {
+.back-to-top .backIcon:hover , .back-to-top__footer .backIcon:hover {
   color: white;
   background-color: var(--pink);
 }
