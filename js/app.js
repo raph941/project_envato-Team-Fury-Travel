@@ -1,7 +1,7 @@
 (function ($) {
     "use strict"; // Start of use strict
 
-      
+
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
         target: "#mainNav",
@@ -21,6 +21,17 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 
+    var $btn = $('#btnTop');
+    var $home = $('#topSection');
+    var startpoint = $home.scrollTop() + $home.height();
+
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > startpoint) {
+            $btn.show();
+        } else {
+            $btn.hide();
+        }
+    });
 
 
 })(jQuery); // End of use strict
