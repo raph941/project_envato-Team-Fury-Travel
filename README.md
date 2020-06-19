@@ -13,4 +13,4 @@ Collaboration Instructions:
     6. once you are done working run "git pull" locally
     7. push your code to the repository
     8. make a Pull request to the master branch. 
-    9. stop there. do not merge your PR *very important
+    9. stop there. do not merge your PR *very important.
