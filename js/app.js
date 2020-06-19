@@ -1,7 +1,6 @@
 (function ($) {
     "use strict"; // Start of use strict
 
-
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
         target: "#mainNav",
@@ -19,10 +18,14 @@
     // Collapse now if page is not at top
     navbarCollapse();
     // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
 
-    console.log($(window).width())
-     $(window).scroll(function () {
+
+    // backToTop Button hided by default 
+    $('#back-to-top').fadeOut();
+    //  scroll actions
+    $(window).scroll(navbarCollapse);
+    $(window).scroll(function () {
+        console.log($(this).scrollTop(), $(this).width())
         if ($(this).scrollTop() > 50 && $(this).width() < 1440) {
             $('#back-to-top').fadeIn();
         } else {
@@ -39,3 +42,8 @@
 
 
 })(jQuery); // End of use strict
+
+
+$(window).load(function () {
+
+});
