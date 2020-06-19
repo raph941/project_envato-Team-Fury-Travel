@@ -126,7 +126,6 @@ body {
 
 /* Back to top button*/
 
-
 .back-to-top {
   position: fixed;
   color: var(--pink);
@@ -136,7 +135,7 @@ body {
   z-index: 100;
 }
 
-.back-to-top__footer{
+.back-to-top__footer {
   color: var(--pink);
   bottom: 25px;
   right: 25px;
@@ -144,36 +143,44 @@ body {
   z-index: 100;
 }
 
-.back-to-top .backIcon, .back-to-top__footer .backIcon{
+.back-to-top .backIcon,
+.back-to-top__footer .backIcon {
   background-color: white;
   border: 2x solid var(--pink);
   border-radius: 50%;
   padding: 10px;
 }
 
-.back-to-top .backIcon:hover , .back-to-top__footer .backIcon:hover {
+.back-to-top .backIcon:hover,
+.back-to-top__footer .backIcon:hover {
   color: white;
   background-color: var(--pink);
 }
 
-.back-to-top .backIcon:active   .back-to-top__footer:active{
+.back-to-top:hover .backIcon,
+.back-to-top__footer:hover .backIcon {
+  color: white;
+  background-color: var(--pink);
+}
+
+.back-to-top .backIcon:active .back-to-top__footer:active {
   color: white;
   background-color: var(--pink);
 }
 
 .back-to-top__footer {
   position: absolute;
-  display:none;
-  }
+  display: none;
+}
 
-@media screen and (min-width: 1440px){
-  .back-to-top{
+@media screen and (min-width: 1440px) {
+  .back-to-top {
     display: none;
   }
 
   .back-to-top__footer {
-  position: absolute;
-  display: block;
+    position: absolute;
+    display: block;
   }
 }
 

@@ -21,16 +21,20 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 
-    var $btn = $('#btnTop');
-    var $home = $('#topSection');
-    var startpoint = $home.scrollTop() + $home.height();
-
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > startpoint) {
-            $btn.show();
+    console.log($(window).width())
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 50 && $(this).width() < 1440) {
+            $('#back-to-top').fadeIn();
         } else {
-            $btn.hide();
+            $('#back-to-top').fadeOut();
         }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
     });
 
 
