@@ -116,6 +116,7 @@ label:hover:before {
 
 @media (min-width: 544px) {  
   .hero {font-size:0.5rem;} /*1rem = 16px*/
+  
 
 }
  
@@ -151,13 +152,36 @@ background-color: rgba(246, 246, 246, 0.342);
 color: #ff1d58 !important;
 }
 .bg-primary-color {
-background-color: #ff1d58;
+background-color: #ff1d58 !important;
 }
-header {
+
+.book-button {
+  font-size: 2rem !important;
+}
+/* header {
 background-image: url('../images/tour/pascal-bernardon-Y4vRJjmpsJ8-unsplash\ 1.png'); 
 background-position: center; 
 background-size: cover;
+} */
+
+.book-input {
+  font-size: 1.7rem;
+  width: 100%
 }
+
+.book-input::placeholder {
+  font-size: 1.7rem;
+  /* font-weight: normal; */
+  color: black;
+  font-weight: 300;
+  /* padding-top: 5px; */
+}
+
+.tour-detail-header {
+  background-image: url('../images/tour/TourImage.png'); 
+  background-position: center; 
+  background-size: cover;
+  }
 
 header .header-ovelay {
 background-color: rgba(0, 0, 0, 0.596);
