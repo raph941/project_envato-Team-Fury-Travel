@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
- 
+
 body {
   background-color: #ffffff;
   color: #333333;
@@ -14,6 +13,11 @@ body {
 
 :root {
   --pink: #ff1d58;
+}
+
+.wrapper__page {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Navbar */
@@ -31,15 +35,22 @@ body {
   transition: font-size 0.3s ease-in-out;
 }
 
-.signin_anchor:hover{
+.signin_anchor:hover {
   text-decoration: none;
 }
 
-.navbar-brand{
-    position: relative;
+.navbar-brand {
+  position: relative;
 }
 
-
+.navbar-brand::after {
+  content: ".";
+  position: absolute;
+  font-size: 5rem;
+  bottom: -38px;
+  right: 63px;
+  color: var(--pink);
+}
 
 #navbarNav a {
   color: #ffffff;
@@ -89,6 +100,8 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #212529;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 #mainNav.navbar-shrink .navbar-brand {
   font-size: 1.5em;
@@ -110,6 +123,68 @@ body {
     margin-left: 1rem;
   }
 }
+
+/* Back to top button*/
+
+.back-to-top {
+  position: fixed;
+  color: var(--pink);
+  bottom: 25px;
+  right: 25px;
+  font-size: 3.5rem;
+  z-index: 100;
+}
+
+.back-to-top__footer {
+  color: var(--pink);
+  bottom: 25px;
+  right: 25px;
+  font-size: 3.5rem;
+  z-index: 100;
+}
+
+.back-to-top .backIcon,
+.back-to-top__footer .backIcon {
+  background-color: white;
+  border: 2x solid var(--pink);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.back-to-top .backIcon:hover,
+.back-to-top__footer .backIcon:hover {
+  color: white;
+  background-color: var(--pink);
+}
+
+.back-to-top:hover .backIcon,
+.back-to-top__footer:hover .backIcon {
+  color: white;
+  background-color: var(--pink);
+}
+
+.back-to-top .backIcon:active .back-to-top__footer:active {
+  color: white;
+  background-color: var(--pink);
+}
+
+.back-to-top__footer {
+  position: absolute;
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .back-to-top {
+    display: none;
+  }
+
+  .back-to-top__footer {
+    position: absolute;
+    display: block;
+  }
+}
+
+/* Back to top button*/
 
 /* Masthead */
 .masthead {
@@ -447,83 +522,92 @@ body {
   font-size: 4rem;
 }
 .swiper__arrow:hover {
-    color: var(--pink);
+  color: var(--pink);
 }
 
-
-.swiper__score{
-    font-size: 1.5rem;
-    color: var(--pink);
+.swiper__score {
+  font-size: 1.5rem;
+  color: var(--pink);
 }
 
-.score__number{
-color:#ffffff;
+.score__number {
+  color: #ffffff;
 }
 
 /* Clients */
 
-
 /*footer */
-.footer{
-    background-color:#333333 ;
+.footer {
+  background-color: #333333;
+  position: relative;
 }
 
-.footer__logo p  {
-    color:#ffffff;
-    font-family: "Caveat", cursive;
-    font-size: 2rem;
-    position: relative;
+.footer__logo p {
+  color: #ffffff;
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  position: relative;
 }
 
-.footer__logo p span{
-    position: relative;
+.footer__logo p span {
+  position: relative;
 }
 
-.footer__logo p span::after{
-    content: ".";
-     position: absolute;
-    font-size: 5rem;
-    bottom: -45px;
-    right: 63px;
-    color: var(--pink);
+.footer__logo p span::after {
+  content: ".";
+  position: absolute;
+  font-size: 5rem;
+  bottom: -45px;
+  right: 63px;
+  color: var(--pink);
 }
 
-.footers__lists a, .footers__lists li{
-    color: white;
+.footers__lists {
+  text-align: left;
 }
 
-.footers__lists ul{
-    list-style-type: none;
+.footers__lists a,
+.footers__lists li {
+  color: white;
 }
 
-.footers__lists li{
-    padding: 0.5rem 0;
-    position: relative;
+.footers__lists ul {
+  list-style-type: none;
 }
 
-.footer__icon{
-    position: absolute;
-    left: -30px;
-    color: var(--pink);
+.footers__lists li {
+  padding: 0.5rem 0;
+  position: relative;
 }
 
-.footer__social{
-    color: #f2f2f2ad;
+.footer__icon {
+  position: absolute;
+  left: -30px;
+  color: var(--pink);
 }
 
-.footer__socialIcons a{
-    color:     var(--pink);
-    font-size: 1.5rem;
-    text-decoration: none;
+.footer__social {
+  color: #f2f2f2ad;
 }
 
-.footer__socialIcons a:hover{
-    opacity: 0.6;
+.footer__socialIcons a {
+  color: var(--pink);
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
-@media screen and (max-width:767px){
-    .footers__list1, .footers__list2{
-        text-align: center;
-    }
+.footer__socialIcons a:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+  .footers__lists {
+    text-align: center;
+  }
+
+  .footer__icon {
+    position: inherit;
+    margin-right: 0rem;
+  }
 }
 /*footer */
